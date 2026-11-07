@@ -4,7 +4,7 @@
 // Leaflet + GeoServer WMS
 // ============================================
 
-const GEOSERVER_URL = 'http://localhost:8080/geoserver/taller/wms';
+const GEOSERVER_URL = 'http://localhost:8081/geoserver/taller/wms';
 
 // Inicializar mapa
 const map = L.map('map', {
@@ -57,13 +57,6 @@ const departamentos = L.tileLayer.wms(GEOSERVER_URL, {
     version: '1.1.1'
 });
 
-const municipios = L.tileLayer.wms(GEOSERVER_URL, {
-    layers: 'taller:municipios',
-    format: 'image/png',
-    transparent: true,
-    version: '1.1.1'
-});
-
 // Mostrar departamentos inicialmente
 departamentos.addTo(map);
 
@@ -79,7 +72,7 @@ const mapasBase = {
 
 const capas = {
     'Departamentos': departamentos,
-    'Municipios': municipios
+    
 };
 
 // Control de capas

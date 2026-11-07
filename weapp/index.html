@@ -1,82 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Visualización interactiva de departamentos y municipios de Colombia usando servicios WMS y WFS de GeoServer">
-    <meta name="author" content="Curso de Servicios Web Geográficos">
-    <title>Colombia - Departamentos y Municipios | Servicios Web Geográficos</title>
+    <title>Colombia - División Administrativa</title>
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <h1>🗺️ Colombia - División Administrativa</h1>
-            <p>Visualización de Departamentos y Municipios mediante Servicios Web Geográficos (WMS/WFS)</p>
-        </div>
-    </header>
 
-    <!-- Contenedor principal -->
-    <div class="main-container">
-        <!-- Panel lateral -->
-        <aside class="sidebar">
-            <div class="sidebar-section">
-                <h2>📊 Información</h2>
-                <div id="info-panel">
-                    <p><strong>Capas disponibles:</strong></p>
-                    <ul>
-                        <li>Departamentos (33)</li>
-                        <li>Municipios (~1100)</li>
-                    </ul>
-                    <p class="info-text">
-                        Haz clic en el mapa para ver información detallada de cada departamento.
-                    </p>
-                </div>
-            </div>
+    <div id="map"></div>
 
-            <div class="sidebar-section">
-                <h2>🔍 Búsqueda</h2>
-                <input type="text" id="search-input" placeholder="Buscar departamento..." class="search-input">
-                <button id="search-button" class="btn-primary">Buscar</button>
-                <div id="search-results"></div>
-            </div>
-
-            <div class="sidebar-section">
-                <h2>ℹ️ Acerca de</h2>
-                <p class="small-text">
-                    <strong>Fuente de datos:</strong> Instituto Geográfico Agustín Codazzi (IGAC)<br>
-                    <strong>Servidor:</strong> GeoServer<br>
-                    <strong>Estándares:</strong> OGC WMS, WFS<br>
-                    <strong>Biblioteca:</strong> Leaflet.js
-                </p>
-            </div>
-        </aside>
-
-        <!-- Mapa -->
-        <main class="map-container">
-            <div id="map"></div>
-        </main>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Curso de Servicios Web Geográficos | Desarrollado con Leaflet.js y GeoServer</p>
-    </footer>
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-
-    <!-- Aplicación -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
