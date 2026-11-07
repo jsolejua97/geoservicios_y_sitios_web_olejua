@@ -16,6 +16,9 @@ services:
       - "8081:8080"
     depends_on:
       - postgis
+    volumes:
+      - ./geoserver_data:/opt/geoserver_data
+      - "C:/Users/DELLPHOTO/Servicios_SIG_Taller/data/shapefiles:/data/departamentos"
 
   pg_tileserv:
     image: pramsey/pg_tileserv:latest
