@@ -1,0 +1,44 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f5f7;
+}
+
+header {
+    height: 75px;
+    padding: 12px 20px;
+    background: #183b35;
+    color: white;
+}
+
+header h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 13px;
+}
+
+#map {
+    width: 100%;
+    height: calc(100vh - 75px);
+}
+
+.leaflet-control-layers {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.info {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
